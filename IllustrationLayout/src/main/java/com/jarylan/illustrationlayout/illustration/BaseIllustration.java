@@ -32,7 +32,7 @@ public abstract class BaseIllustration implements View.OnClickListener {
     int getLayoutId();
 
     /**
-     * 需要点击事件的控件 id ; null 表示不需要点击事件
+     * 需要点击事件的控件 id ; 可添加多个需要点击的控件， null 表示不需要点击事件
      *
      * @return ids
      */
