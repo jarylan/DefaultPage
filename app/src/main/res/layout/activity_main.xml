@@ -23,14 +23,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#c0c0c0"
-            android:text="Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!"
+            android:text="内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域，内容区域"
             android:textSize="30sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="123456"
-            android:textSize="15sp" />
+            android:text="可嵌套多个子 View"
+            android:textSize="15sp"
+            android:textColor="#f14c4c"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n可嵌套多个子 View"
+            android:textSize="15sp"
+            android:textColor="#12209f"/>
 
     </com.jarylan.illustrationlayout.IllustrationLayout>
 </LinearLayout>

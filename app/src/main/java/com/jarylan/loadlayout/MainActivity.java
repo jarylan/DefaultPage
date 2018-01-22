@@ -10,8 +10,6 @@ import com.jarylan.illustrationlayout.listener.OnReloadListener;
 import com.jarylan.illustrationlayout.illustration.LoadFailIllustration;
 import com.jarylan.illustrationlayout.illustration.LoadingIllustration;
 
-import java.util.Random;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
