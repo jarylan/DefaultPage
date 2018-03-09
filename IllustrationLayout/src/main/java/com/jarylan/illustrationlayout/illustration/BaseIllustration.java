@@ -86,7 +86,7 @@ public abstract class BaseIllustration implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (onReloadListener != null) {
-            onReloadListener.onReload(v);
+            onReloadListener.onReload(v,getClass());
         }
     }
 }

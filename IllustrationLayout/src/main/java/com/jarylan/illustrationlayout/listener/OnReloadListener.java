@@ -17,6 +17,6 @@ public interface OnReloadListener {
      * 重新加载回调
      * @param v 被点击的 view
      */
-    void onReload(View v);
+    void onReload(View v,Class illustration);
 
 }

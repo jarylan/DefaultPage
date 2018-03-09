@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private final static int LOAD_FAIL = 1;
     private final static int LOAD_NETWORK = 2;
 
-    private final static String[] networkErrorStrings = {"如果人生没有 Wifi，那将毫无意义","生活只有眼前的 Wifi","未来和远方的 Wifi 是不存在的"};
+    private final static String[] NETWORK_ERROR_STRINGS = {"如果人生没有 Wifi，那将毫无意义", "生活只有眼前的 Wifi", "未来和远方的 Wifi 是不存在的"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 .addIllustrationView(new NetworkErrorIllustration())
                 .setOnReloadListener(new OnReloadListener() {
                     @Override
-                    public void onReload(View v) {
-                        if (loadlayout.getCurrentIllustration().equals(NetworkErrorIllustration.class)) {
+                    public void onReload(View v,Class illustration) {
+                        if (illustration.equals(NetworkErrorIllustration.class)) {
                             loading(LOAD_FAIL);
                         } else {
                             loading(LOAD_SUCCESS);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void networkError() {
         //替换提示的文本
-        loadlayout.showIllustration(NetworkErrorIllustration.class,getNetworkErrorTip());
+        loadlayout.showIllustration(NetworkErrorIllustration.class, getNetworkErrorTip());
     }
 
     private void loadFail() {
@@ -92,10 +92,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     int pisition = 0;
-    private String getNetworkErrorTip(){
-        if(pisition >= networkErrorStrings.length){
+
+    private String getNetworkErrorTip() {
+        if (pisition >= NETWORK_ERROR_STRINGS.length) {
             pisition = 0;
         }
-        return networkErrorStrings[pisition++];
+        return NETWORK_ERROR_STRINGS[pisition++];
     }
 }
