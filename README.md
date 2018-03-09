@@ -36,10 +36,10 @@ JAVA 代码 ：添加你需要的插图类（可继承 BaseIllustration 自定�
                 .addIllustrationView(new NetworkErrorIllustration())
                 .setOnReloadListener(new OnReloadListener() {
                     @Override
-                    public void onReload(View v) {
+                    public void onReload(View v,Class illustration) {
 						
 						//重新加载逻辑
-						//loadlayout.getCurrentIllustration() 用来判断当前插图                     
+						//illustration 用来判断当前插图                     
 
                     }
                 });
